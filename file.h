@@ -6,6 +6,10 @@
 class File : public QObject
 {
     Q_OBJECT
+
+private:
+
+
 public:
     explicit File(QObject *parent = 0);
 

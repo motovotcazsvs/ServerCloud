@@ -3,9 +3,17 @@
 
 #include <QObject>
 
+#include "file.h"
+#include "folder.h"
+
 class Copy : public QObject
 {
     Q_OBJECT
+
+private:
+    File* file;
+    Folder* folder;
+
 public:
     explicit Copy(QObject *parent = 0);
 

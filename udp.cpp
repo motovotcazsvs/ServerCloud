@@ -1,6 +1,6 @@
-#include "udp.h"
+#include "Udp.h"
 
-udp::udp(QObject *parent) : QObject(parent)
+Udp::Udp(QObject *parent) : QObject(parent)
 {
 
 }

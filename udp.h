@@ -3,11 +3,11 @@
 
 #include <QObject>
 
-class udp : public QObject
+class Udp : public QObject
 {
     Q_OBJECT
 public:
-    explicit udp(QObject *parent = 0);
+    explicit Udp(QObject *parent = 0);
 
 signals:
 

@@ -1,11 +1,22 @@
 #ifndef CLIENT_H
 #define CLIENT_H
 
+#include <QObject>
 
-class Client
+#include "authorization.h"
+#include "copy.h"
+#include "connect.h"
+
+class Client: public QObject
 {
+    Q_OBJECT
+
+private:
+    Connect* connect;
+    Copy *copy;
+
 public:
-    Client();
+    Client(Connect*);
 };
 
 #endif // CLIENT_H

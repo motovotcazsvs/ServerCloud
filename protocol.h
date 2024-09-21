@@ -3,15 +3,33 @@
 
 #include <QObject>
 
-class Protocol : public QObject
+#include "Tcpip.h"
+#include "Udp.h"
+
+class Protocol: public QObject
 {
     Q_OBJECT
+
+private:
+    Tcpip* tcpip;
+    Udp* udp;
+    int descriptor;
+    void protocolTCPIP();
+    void protocolUDP();
+
 public:
-    explicit Protocol(QObject *parent = 0);
+    Protocol(Tcpip*);
+    Protocol(Udp*);
+    quint64 getDescriptor();
 
 signals:
+    void newConnection();
 
 public slots:
+
+private slots:
+    void connectTCPIPUDP();
+
 };
 
 #endif // PROTOCOL_H
