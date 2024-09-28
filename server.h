@@ -2,11 +2,12 @@
 #define SERVER_H
 
 #include <QObject>
+#include <QTcpSocket>
+#include <QTcpServer>
 
-#include "connect.h"
 #include "client.h"
 
-class Server: public QObject
+class Server : public QTcpServer
 {
     Q_OBJECT
 
@@ -14,10 +15,18 @@ public:
     Server();
 
 private:
-    Connect *connect;
-    QMap<quint64, Client*> clients;  // Map to store clients by socket descriptor
+    QMap<qintptr, Client*> clients;
+    void createNewClient(qintptr);
+    quint16 port;
+    quint32 ip;
+    QTcpSocket* socket;
+
 private slots:
-    void createNewClient();
+    void deleteClient();
+
+public slots:
+    void incomingConnection(qintptr);
+
 };
 
 #endif // SERVER_H

@@ -39,5 +39,5 @@ void Server::createNewClient(qintptr descriptor)
 
 void Server::deleteClient()
 {
-    //delete client;
+    delete client;//нада дороблять
 }

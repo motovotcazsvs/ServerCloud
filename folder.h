@@ -2,16 +2,23 @@
 #define FOLDER_H
 
 #include <QObject>
+#include <QDataStream>
 
-class Folder : public QObject
+
+class Synchronization;
+class Folder
 {
-    Q_OBJECT
+private:
+    QString path;
+    QString name;
+    QString previous_path;
+    Synchronization* synchronization;
+
 public:
-    explicit Folder(QObject *parent = 0);
+    Folder(Synchronization*, QDataStream&);
+    ~Folder();
+    void endFolder(QDataStream&);
 
-signals:
-
-public slots:
 };
 
 #endif // FOLDER_H

@@ -12,45 +12,19 @@ TEMPLATE = app
 SOURCES += main.cpp \
     server.cpp \
     client.cpp \
-    state.cpp \
     settingsfile.cpp \
-    controllersql.cpp \
-    filemanager.cpp \
-    connect.cpp \
-    protocol.cpp \
-    tcpip.cpp \
-    udp.cpp \
-    encryption.cpp \
-    output.cpp \
-    sendinformation.cpp \
-    senddata.cpp \
-    information.cpp \
-    json.cpp \
     authorization.cpp \
-    copy.cpp \
-    delete.cpp \
     file.cpp \
-    folder.cpp
+    folder.cpp \
+    synchronization.cpp \
+    replace.cpp
 
 HEADERS += \
     server.h \
     client.h \
-    state.h \
     settingsfile.h \
-    controllersql.h \
-    filemanager.h \
-    connect.h \
-    protocol.h \
-    tcpip.h \
-    udp.h \
-    encryption.h \
-    output.h \
-    sendinformation.h \
-    senddata.h \
-    information.h \
-    json.h \
     authorization.h \
-    copy.h \
-    delete.h \
     file.h \
-    folder.h
+    folder.h \
+    synchronization.h \
+    replace.h

@@ -7,7 +7,7 @@ class SettingsFile : public QObject
 {
     Q_OBJECT
 public:
-    explicit SettingsFile(QObject *parent = 0);
+    explicit SettingsFile(QObject *parent = nullptr);
 
 signals:
 

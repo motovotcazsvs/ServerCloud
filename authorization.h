@@ -6,8 +6,12 @@
 class Authorization : public QObject
 {
     Q_OBJECT
+
+private:
+    QString path_id;
+
 public:
-    explicit Authorization(QObject *parent = 0);
+
 
 signals:
 

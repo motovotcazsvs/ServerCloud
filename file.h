@@ -2,20 +2,35 @@
 #define FILE_H
 
 #include <QObject>
+#include <QFile>
+#include <QDataStream>
 
-class File : public QObject
+
+
+class Synchronization;
+class File
 {
-    Q_OBJECT
-
 private:
-
+    QFile* file;
+    quint64 current_size;
+    quint64 size;
+    QString name;
+    QString path;
+    Synchronization* synchronization;
 
 public:
-    explicit File(QObject *parent = 0);
+    File(Synchronization*, QDataStream&);
+    ~File();
+    void copyFile();
+
 
 signals:
 
+private slots:
+
+
 public slots:
+
 };
 
 #endif // FILE_H
