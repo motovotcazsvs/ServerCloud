@@ -36,6 +36,7 @@ void Authorization::authorizationClient()
         if(id == 0){
             id = settingsfile->newID();
             sendID();
+            return;
         }
         folder_id = settingsfile->getFolderID(id);
         client->setID(id);
