@@ -16,6 +16,7 @@ private:
     quint64 id;
     SettingsFile* settingsfile;
     Client* client;
+    void sendID();
 
 public:
     explicit Authorization(QObject* parent = nullptr, Client* client = nullptr, QTcpSocket* sock = nullptr, SettingsFile* settingsfile = nullptr);

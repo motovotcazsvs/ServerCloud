@@ -17,6 +17,7 @@ private:
     QString name;
     QString path;
     Synchronization* synchronization;
+    void createOrReplace();
 
 public:
     File(Synchronization*, QDataStream&);

@@ -9,8 +9,8 @@ File::File(Synchronization* synchronization, QDataStream& in) : synchronization(
     in >> name >> size;
     current_size = 0;
     path = synchronization->getCurrentPath();
-    file = new QFile(path + "/" + name);
-    file->open(QIODevice::WriteOnly | QIODevice::Append);
+    createOrReplace();
+
 
 }
 
@@ -41,4 +41,23 @@ void File::copyFile()
 
 
 
+}
+
+void File::createOrReplace()
+{
+
+    file = new QFile(path + "/" + name);
+
+    // Перевірка, чи існує файл
+    if(file->exists()){
+        qDebug() << "Файл існує, замінюємо:" << file->fileName();
+        file->remove(); // Видалити існуючий файл
+    }else{
+        qDebug() << "Файл не існує, створюємо:" << file->fileName();
+    }
+
+    // Відкриваємо файл для запису
+    if (!file->open(QIODevice::WriteOnly)) {
+        qWarning() << "no open for write" << file->fileName();
+    }
 }
