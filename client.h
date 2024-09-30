@@ -7,34 +7,38 @@
 #include "authorization.h"
 #include "synchronization.h"
 
-
+class SettingsFile;
 class Client: public QObject
 {
     Q_OBJECT
 
 public:
-    explicit Client(QObject* parent = nullptr, QTcpSocket* sock = nullptr);
+    explicit Client(QObject* parent = nullptr, QTcpSocket* sock = nullptr, SettingsFile* settingsfile = nullptr);
     enum State {
         stateWaiting,
         stateSync
     };
     ~Client();
+    void setID(quint64);
+    void setFolderID(QString);
+    void authorizationSuccessful();
 
 private:
     QTcpSocket* socket;
     State state;
-    QString ID;
+    quint64 ID;
     QString folder_id;
     qintptr socket_descriptor;
     Synchronization* synchronization;
     Authorization* authorization;
 
 
+
 signals:
-    void signalReceive();
+
 
 private slots:
-    void slotReadyRead();
+
 };
 
 #endif // CLIENT_H

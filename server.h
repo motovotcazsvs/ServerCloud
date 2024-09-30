@@ -5,6 +5,7 @@
 #include <QTcpSocket>
 #include <QTcpServer>
 
+#include "settingsfile.h"
 #include "client.h"
 
 class Server : public QTcpServer
@@ -13,6 +14,7 @@ class Server : public QTcpServer
 
 public:
     Server();
+    ~Server();
 
 private:
     QMap<qintptr, Client*> clients;
@@ -20,6 +22,8 @@ private:
     quint16 port;
     quint32 ip;
     QTcpSocket* socket;
+    SettingsFile* settingsfile;
+
 
 private slots:
     void deleteClient();

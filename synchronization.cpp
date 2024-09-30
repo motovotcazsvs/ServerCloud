@@ -4,8 +4,9 @@
 #include "folder.h"
 #include "file.h"
 
-Synchronization::Synchronization(QObject* parent, QTcpSocket* sock) : QObject(parent), socket(sock)
+Synchronization::Synchronization(QObject* parent, QTcpSocket* sock, QString path_id) : QObject(parent), socket(sock), path_id(path_id)
 {
+    current_path = path_id;
     QObject::connect(socket, &QTcpSocket::readyRead, this, &Synchronization::receive);
     size_info = 0;
     state = Waiting;
@@ -34,7 +35,7 @@ void Synchronization::receive()
         QDataStream in(socket);
         in.setVersion(QDataStream::Qt_5_7);
 
-        if(size_info == 0){ //якщо інфо має розмір 0
+        if(size_info == 0){ //якщо інфи ще не було
             qDebug() << "size_info == 0)";
             if(socket->bytesAvailable() < 2){ //якщо інфи менше двох байт
                 qDebug() << "bytesAvailable() < 2";

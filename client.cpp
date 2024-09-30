@@ -2,15 +2,18 @@
 #include <QDebug>
 #include <QDataStream>
 
-Client::Client(QObject *parent, QTcpSocket* sock) : QObject(parent), socket(sock)
+#include "settingsfile.h"
+
+Client::Client(QObject *parent, QTcpSocket* sock, SettingsFile* settingsfile) : QObject(parent), socket(sock)
 {
     state = stateWaiting;
+    socket_descriptor = socket->socketDescriptor();
+    authorization = new Authorization(this, this, socket, settingsfile);
 
-    //synchronization = new Synchronization(this, socket);
+
 
     qDebug() << "socket->socketDescriptor()" << socket->socketDescriptor();
 
-    connect(socket, &QTcpSocket::readyRead, this, &Client::slotReadyRead);
 }
 
 Client::~Client()
@@ -18,18 +21,26 @@ Client::~Client()
     delete synchronization;
 }
 
-void Client::slotReadyRead()
+void Client::authorizationSuccessful()
 {
-    socket = (QTcpSocket*)sender();
-    QDataStream in(socket);
-    in.setVersion(QDataStream::Qt_5_7);
-    quint16 size;
-    QString info;
-    in >> size;
-    in >> info;
-    qDebug() << socket->socketDescriptor() << "info" << info;
+    delete authorization;
+    synchronization = new Synchronization(this, socket, folder_id);
 
 }
+
+void Client::setID(quint64 id)
+{
+    ID = id;
+}
+
+void Client::setFolderID(QString folder_name)
+{
+    folder_id = folder_name;
+}
+
+
+
+
 
 
 

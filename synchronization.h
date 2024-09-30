@@ -12,7 +12,7 @@ class Synchronization : public QObject
     Q_OBJECT
 
 public:
-    explicit Synchronization(QObject* parent = nullptr, QTcpSocket* sock = nullptr);
+    explicit Synchronization(QObject* parent = nullptr, QTcpSocket* sock = nullptr, QString path_id = "");
     ~Synchronization();
     enum State{
         Waiting,    // Очікування нових даних
