@@ -13,7 +13,7 @@ class Client: public QObject
     Q_OBJECT
 
 public:
-    explicit Client(QObject* parent = nullptr, QTcpSocket* sock = nullptr, SettingsFile* settingsfile = nullptr);
+    explicit Client(QObject* parent = nullptr, QTcpSocket* socket = nullptr, SettingsFile* settingsfile = nullptr);
     enum State {
         stateWaiting,
         stateSync
@@ -21,7 +21,7 @@ public:
     ~Client();
     void setID(quint64);
     void setFolderID(QString);
-    void authorizationSuccessful();
+    void authorizationSuccessfull();
 
 private:
     QTcpSocket* socket;

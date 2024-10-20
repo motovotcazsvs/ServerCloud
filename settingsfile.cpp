@@ -6,7 +6,7 @@
 #include <QJsonObject>
 #include <QJsonArray>
 #include <QDebug>
-
+#include <QDir>
 
 SettingsFile::SettingsFile(const QString& settingsfile_p)
 {
@@ -64,10 +64,14 @@ quint64 SettingsFile::newID()
         newId = list_id.lastKey() + 1; // Генеруємо новий ID на основі останнього
     }
 
+
     QString folderName = "ID" + QString::number(newId);
     list_id[newId] = folderName;
 
-    qDebug() << "Новий ID згенеровано:" << newId << "з папкою:" << folderName;
+    QDir dir;
+    dir.mkpath(folderName);
+
+    qDebug() << "New ID generated:" << newId << "folder:" << folderName;
 
     saveSettingsFile(); // Зберігаємо новий ID у файл після генерації
     return newId;

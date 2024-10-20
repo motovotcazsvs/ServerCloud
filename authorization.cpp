@@ -5,7 +5,7 @@
 #include "settingsfile.h"
 #include "client.h"
 
-Authorization::Authorization(QObject* parent, Client* client, QTcpSocket* sock, SettingsFile* settingsfile) : QObject(parent), client(client), socket(sock), settingsfile(settingsfile)
+Authorization::Authorization(QObject* parent, Client* client, QTcpSocket* socket, SettingsFile* settingsfile) : QObject(parent), client(client), socket(socket), settingsfile(settingsfile)
 {
     QObject::connect(socket, &QTcpSocket::readyRead, this, &Authorization::authorizationClient);
     id = 0;
@@ -19,13 +19,14 @@ Authorization::~Authorization()
 
 void Authorization::authorizationClient()
 {
+    qDebug() << "authorizationClient()";
     socket = (QTcpSocket*)sender();
     QDataStream in(socket);
     in.setVersion(QDataStream::Qt_5_7);
     quint16 size;
     QString type;
 
-    if(socket->bytesAvailable() < 2) return;//якщо менше поля розмір то вийти
+    if(socket->bytesAvailable() < 2) return;
     in >> size;
     if(socket->bytesAvailable() < size) return;
 
@@ -34,6 +35,7 @@ void Authorization::authorizationClient()
     if(type == "ID"){
         in >> id;
         if(id == 0){
+            qDebug() << "new client";
             id = settingsfile->newID();
             sendID();
             return;
@@ -41,7 +43,7 @@ void Authorization::authorizationClient()
         folder_id = settingsfile->getFolderID(id);
         client->setID(id);
         client->setFolderID(folder_id);
-        client->authorizationSuccessful();
+        client->authorizationSuccessfull();
 
     }
 
@@ -49,6 +51,7 @@ void Authorization::authorizationClient()
 
 void Authorization::sendID()
 {
+    qDebug() << "sendID()" << id;
     QByteArray arr;
     QDataStream out(&arr, QIODevice::WriteOnly);
     out.setVersion(QDataStream::Qt_5_7);

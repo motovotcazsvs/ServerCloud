@@ -4,7 +4,7 @@
 
 #include "settingsfile.h"
 
-Client::Client(QObject *parent, QTcpSocket* sock, SettingsFile* settingsfile) : QObject(parent), socket(sock)
+Client::Client(QObject *parent, QTcpSocket* socket, SettingsFile* settingsfile) : QObject(parent), socket(socket)
 {
     state = stateWaiting;
     socket_descriptor = socket->socketDescriptor();
@@ -21,7 +21,7 @@ Client::~Client()
     delete synchronization;
 }
 
-void Client::authorizationSuccessful()
+void Client::authorizationSuccessfull()
 {
     delete authorization;
     synchronization = new Synchronization(this, socket, folder_id);

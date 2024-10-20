@@ -14,7 +14,7 @@ Synchronization::Synchronization(QObject* parent, QTcpSocket* sock, QString path
 
 Synchronization::~Synchronization()
 {
-    delete socket;  // Видаляємо динамічно створений сокет, якщо необхідно
+    delete socket;
 
     // Видаляємо всі папки зі списку
     for (Folder* folder : folders) {
