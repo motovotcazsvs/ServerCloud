@@ -36,16 +36,18 @@ void Synchronization::receive()
         in.setVersion(QDataStream::Qt_5_7);
 
         if(size_info == 0){ //якщо інфи ще не було
-            qDebug() << "size_info == 0)";
+            qDebug() << "size_info == 0";
             if(socket->bytesAvailable() < 2){ //якщо інфи менше двох байт
                 qDebug() << "bytesAvailable() < 2";
                 return; //то вийти
             }
             in >> size_info; //розмір інформації
+            qDebug() << "size_info" << size_info;
         }
 
+        qDebug() << "size_info" << size_info;
         if (socket->bytesAvailable() < size_info){ //якщо доступно байт менше розміру інфо
-            qDebug() << "bytesAvailable() < size_info";
+            qDebug() << "bytesAvailable() < size_info" << socket->bytesAvailable();
             return; //то вийти
         }
 
