@@ -46,7 +46,7 @@ void Authorization::authorizationClient()
         client->authorizationSuccessfull();
 
     }
-
+    if(socket->bytesAvailable()) qDebug() << "data available";//delete
 }
 
 void Authorization::sendID()

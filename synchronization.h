@@ -31,7 +31,7 @@ private:
     QTcpSocket* socket;
     QList<Folder*> folders;
     File* file;
-    int size_info;
+    quint16 size_info;
     QString path_id;
     QString current_path;
     State state;

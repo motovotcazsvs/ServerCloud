@@ -32,12 +32,12 @@ void File::copyFile()
     current_size += data_block_file.size();
 
     if(current_size >= size) {
-        qDebug() << "Файл отримано повністю";
+        qDebug() << "The file is received completely";
         file->close();
-        synchronization->setState(Synchronization::ReadingInfo);
+        synchronization->setState(Synchronization::Waiting);
     }
 
-    if(available > bytesToRead) synchronization->setState(Synchronization::ReadingInfo);
+    if(available > bytesToRead) synchronization->setState(Synchronization::Waiting);
 
 
 
@@ -50,10 +50,10 @@ void File::createOrReplace()
 
     // Перевірка, чи існує файл
     if(file->exists()){
-        qDebug() << "Файл існує, замінюємо:" << file->fileName();
+        qDebug() << "The file exists, replace:" << file->fileName();
         file->remove(); // Видалити існуючий файл
     }else{
-        qDebug() << "Файл не існує, створюємо:" << file->fileName();
+        qDebug() << "The file does not exist, create it:" << file->fileName();
     }
 
     // Відкриваємо файл для запису

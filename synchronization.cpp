@@ -42,13 +42,13 @@ void Synchronization::receive()
                 return; //то вийти
             }
             in >> size_info; //розмір інформації
-            qDebug() << "size_info" << size_info;
+            //qDebug() << "size_info" << size_info;
         }
 
         qDebug() << "size_info" << size_info;
         if (socket->bytesAvailable() < size_info){ //якщо доступно байт менше розміру інфо
             qDebug() << "bytesAvailable() < size_info" << socket->bytesAvailable();
-            return; //то вийти
+            return;
         }
 
         QString type;
