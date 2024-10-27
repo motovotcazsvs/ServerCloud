@@ -45,6 +45,7 @@ void File::copyFile()
 
 void File::createOrReplace()
 {
+    qDebug() << "createOrReplace()";
 
     file = new QFile(path + "/" + name);
 

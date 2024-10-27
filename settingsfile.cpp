@@ -37,7 +37,7 @@ void SettingsFile::loadSettings(const QString& settingsfile_path)
     }
 
     QJsonObject jsonObj = doc.object();
-    QJsonArray clientsArray = jsonObj["clients"].toArray();
+    QJsonArray clientsArray = jsonObj["ids"].toArray();
 
     for (const QJsonValue& value : clientsArray) {
         QJsonObject clientObj = value.toObject();
@@ -46,6 +46,8 @@ void SettingsFile::loadSettings(const QString& settingsfile_path)
 
         list_id[clientId] = folderName;
     }
+
+    qDebug() << "loadSettings() << list_id.count()" << list_id.count();
 }
 
 QString SettingsFile::getFolderID(quint64 id)const
@@ -60,8 +62,10 @@ quint64 SettingsFile::newID()
 {
     quint64 newId = 1; // Починаємо з 1, якщо ще немає жодного ID
 
-    if (!list_id.isEmpty()) {
+    if (!list_id.isEmpty()){
         newId = list_id.lastKey() + 1; // Генеруємо новий ID на основі останнього
+        qDebug() << "!list_id.isEmpty()" << newId;
+
     }
 
 

@@ -67,7 +67,8 @@ void Synchronization::receive()
             folders.takeLast();
             size_info = 0;
             state = Waiting;
-            return;
+            if(socket->bytesAvailable()) receive();
+            else return;
         }
         else if(type == "FILE"){
             file = new File(this, in);
@@ -90,7 +91,7 @@ void Synchronization::receive()
         receive(); //викликаємо слот знову, щоб обробити зайві дані
     }
 
-    //if(socket->bytesAvailable()) receive();
+    if(socket->bytesAvailable()) receive();
 }
 
 quint64 Synchronization::getBytesAvailable()
