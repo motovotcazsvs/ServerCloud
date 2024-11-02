@@ -6,9 +6,9 @@
 
 File::File(Synchronization* synchronization, QDataStream& in) : synchronization(synchronization)
 {
-    in >> name >> size;
-    current_size = 0;
-    path = synchronization->getCurrentPath();
+    in >> this->name >> this->size;
+    this->current_size = 0;
+    this->path = synchronization->getCurrentPath();
     createOrReplace();
 
 
@@ -16,49 +16,62 @@ File::File(Synchronization* synchronization, QDataStream& in) : synchronization(
 
 File::~File()
 {
-    delete file;
+    delete this->file;
     qDebug() << "~File()";
 }
 
 void File::copyFile()
 {
+    qDebug() << "copyFile() open";
+    qDebug() << "get state" << synchronization->getState();
+
     quint64 available = synchronization->getBytesAvailable();
-    quint64 subtract = size - current_size;
-    if(size < current_size) subtract = 0;
+    quint64 subtract = this->size - this->current_size;
+    if(this->size < this->current_size) subtract = 0;
     quint64 bytesToRead = qMin(available, subtract);
     QByteArray data_block_file;
     synchronization->getBytes(data_block_file, bytesToRead);
-    file->write(data_block_file);
-    current_size += data_block_file.size();
+    qDebug() << "file->write(data_block_file)1";
+    this->file->write(data_block_file);
+    qDebug() << "file->write(data_block_file)2";
+    this->current_size += data_block_file.size();
 
-    if(current_size >= size) {
+    if(this->current_size >= this->size) {
+        qDebug() << "current_size >= size";
         qDebug() << "The file is received completely";
-        file->close();
+        this->file->close();
+        qDebug() << "file->close()";
         synchronization->setState(Synchronization::Waiting);
     }
 
-    if(available > bytesToRead) synchronization->setState(Synchronization::Waiting);
+    if(available > bytesToRead){
+        qDebug() << "available > bytesToRead";
+        synchronization->setState(Synchronization::Waiting);
+    }
 
-
+    qDebug() << "copyFile() close";
 
 }
 
 void File::createOrReplace()
 {
-    qDebug() << "createOrReplace()";
+    qDebug() << "createOrReplace() open";
 
-    file = new QFile(path + "/" + name);
+    this->file = new QFile(this->path + "/" + this->name);
 
     // Перевірка, чи існує файл
-    if(file->exists()){
-        qDebug() << "The file exists, replace:" << file->fileName();
-        file->remove(); // Видалити існуючий файл
+    if(this->file->exists()){
+        qDebug() << "The file exists, replace:" << this->file->fileName();
+        this->file->remove(); // Видалити існуючий файл
     }else{
-        qDebug() << "The file does not exist, create it:" << file->fileName();
+        qDebug() << "The file does not exist, create it:" << this->file->fileName();
     }
 
     // Відкриваємо файл для запису
-    if (!file->open(QIODevice::WriteOnly)) {
-        qWarning() << "no open for write" << file->fileName();
+    if (!this->file->open(QIODevice::WriteOnly)) {
+        qWarning() << "no open for write" << this->file->fileName();
     }
+
+    qDebug() << "createOrReplace() close";
+
 }

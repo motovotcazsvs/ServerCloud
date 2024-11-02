@@ -16,8 +16,7 @@ SOURCES += main.cpp \
     authorization.cpp \
     file.cpp \
     folder.cpp \
-    synchronization.cpp \
-    replace.cpp
+    synchronization.cpp
 
 HEADERS += \
     server.h \
@@ -26,5 +25,4 @@ HEADERS += \
     authorization.h \
     file.h \
     folder.h \
-    synchronization.h \
-    replace.h
+    synchronization.h

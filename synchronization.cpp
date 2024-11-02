@@ -14,6 +14,8 @@ Synchronization::Synchronization(QObject* parent, QTcpSocket* sock, QString path
 
 Synchronization::~Synchronization()
 {
+    qDebug() << "Synchronization();";
+
     delete socket;
 
     // Видаляємо всі папки зі списку
@@ -27,7 +29,8 @@ Synchronization::~Synchronization()
 
 void Synchronization::receive()
 {
-    //qDebug() << "slot read";
+    qDebug() << "receive() open";
+
     socket = (QTcpSocket*)sender();
 
     if(state == Waiting){ //якщо ще не прочитали інформацію
@@ -39,6 +42,7 @@ void Synchronization::receive()
             qDebug() << "size_info == 0";
             if(socket->bytesAvailable() < 2){ //якщо інфи менше двох байт
                 qDebug() << "bytesAvailable() < 2";
+                qDebug() << "receive() close1";
                 return; //то вийти
             }
             in >> size_info; //розмір інформації
@@ -48,6 +52,7 @@ void Synchronization::receive()
         qDebug() << "size_info" << size_info;
         if (socket->bytesAvailable() < size_info){ //якщо доступно байт менше розміру інфо
             qDebug() << "bytesAvailable() < size_info" << socket->bytesAvailable();
+            qDebug() << "receive() close2";
             return;
         }
 
@@ -58,6 +63,11 @@ void Synchronization::receive()
             Folder* newFolder = new Folder(this, in);
             folders.append(newFolder);
             size_info = 0;
+            if(socket->bytesAvailable()){
+                qDebug() << "if(bytesAvailable())";
+                receive();
+            }
+            qDebug() << "receive() close3";
             return;
         }
         else if(type == "END_FOLDER"){
@@ -67,8 +77,14 @@ void Synchronization::receive()
             folders.takeLast();
             size_info = 0;
             state = Waiting;
-            if(socket->bytesAvailable()) receive();
-            else return;
+            if(socket->bytesAvailable()){
+                qDebug() << "if(bytesAvailable())";
+                receive();
+            }
+
+            qDebug() << "receive() close4";
+            return;
+
         }
         else if(type == "FILE"){
             file = new File(this, in);
@@ -78,20 +94,29 @@ void Synchronization::receive()
             //перевіряєм чи є вже дані файла, щоб їх обробити
             qint64 available = socket->bytesAvailable();
             qDebug() << "availableData" << available;
-            if(available == 0) return;
+            if(available == 0){
+                qDebug() << "receive() close5";
+                return;
+            }
 
         }
     }
+
 
     file->copyFile();
 
     if(state == Redundant){
         delete file;
         state = ReadingInfo;
-        receive(); //викликаємо слот знову, щоб обробити зайві дані
+        //receive(); //викликаємо слот знову, щоб обробити зайві дані
     }
 
-    if(socket->bytesAvailable()) receive();
+    if(socket->bytesAvailable()){
+        qDebug() << "socket->bytesAvailable()finish";
+        receive();
+    }
+    qDebug() << "receive() close6";
+
 }
 
 quint64 Synchronization::getBytesAvailable()
