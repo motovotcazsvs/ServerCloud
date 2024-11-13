@@ -34,6 +34,7 @@ void Authorization::authorizationClient()
     qDebug() << socket->socketDescriptor() << "Type Authorization: " << type;
     if(type == "ID"){
         in >> id;
+        qDebug() << "ID" << id;
         if(id == 0){
             qDebug() << "new client";
             id = settingsfile->newID();

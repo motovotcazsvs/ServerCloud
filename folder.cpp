@@ -12,11 +12,25 @@ Folder::Folder(Synchronization* synchronization, QDataStream& in) : synchronizat
     path = synchronization->getCurrentPath();
     previous_path = path;
     path = path + "/" + name;
-    QDir().mkdir(path);
+
+    QDir dir;
+    if(!dir.exists(path)){
+        if(dir.mkpath(path)){
+            qDebug() << "created folder:" << path;
+        }
+        else{
+            qDebug() << "error creating folder:" << path;
+        }
+    }
+    else{
+        qDebug() << "folder already exists:" << path;
+    }
+
     synchronization->setCurrentPath(path);
     qDebug() << "START_FOLDER:" << name;
 
     qDebug() << "Folder() close";
+
 
 }
 
