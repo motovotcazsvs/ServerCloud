@@ -37,7 +37,7 @@ private:
     State state;
 
 
-private slots:
+public slots:
     void receive();
 
 };

@@ -1,0 +1,1955 @@
+18:55:20: Starting C:\Users\user\Desktop\PROGRAMING\QTPROJECTS\ServerCloud\build\Desktop_Qt_6_8_0_MinGW_64_bit-Debug\debug\ServerCloud.exe...
+start server
+no open file! "settingsfile.json"
+save settings
+socket->socketDescriptor() 896
+client connected 896
+authorizationClient()
+896 Type Authorization:  "ID"
+ID 0
+new client
+New ID generated: 1 folder: "ID1"
+save settings
+sendID() 1
+"\x00\x10\x00\x00\x00\x04\x00I\x00""D\x00\x00\x00\x00\x00\x00\x00\x01"
+authorizationClient()
+896 Type Authorization:  "ID"
+ID 1
+sendOK()
+"\x00\b\x00\x00\x00\x04\x00O\x00K"
+receive() open
+state Waiting
+size_info == 0
+size_info 38
+type: "START_FOLDER"
+Folder() open
+created folder: "ID1/fop"
+START_FOLDER: "fop"
+Folder() close
+receive() close3
+receive() open
+state Waiting
+size_info == 0
+size_info 38
+type: "FILE"
+createOrReplace() open
+The file does not exist, create it: "ID1/fop/edr.pdf"
+createOrReplace() close
+availableData 1408
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+copyFile() close
+receive() close6
+receive() open
+copyFile() open
+get state 2
+file->write(data_block_file)1
+file->write(data_block_file)2
+current_size >= size
+The file is received completely
+file->close()
+available > bytesToRead
+copyFile() close
+socket->bytesAvailable()finish
+receive() open
+state Waiting
+size_info == 0
+size_info 25711
+bytesAvailable() < size_info 370
+receive() close2
+receive() close6
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 420
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 932
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 1956
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 2468
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 2980
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 3492
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 4004
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 4516
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 5028
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 5540
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 6052
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 6564
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 7076
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 7588
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 8100
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 8612
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 9124
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 9636
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 10148
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 10660
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 11172
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 11684
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 12196
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 12708
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 13220
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 13732
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 14244
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 14756
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 15268
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 15780
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 16292
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 16804
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 17316
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 17828
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 18340
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 18852
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 19364
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 19876
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 20388
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 20900
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 21412
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 21924
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 22436
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 22948
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 23460
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 23972
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 24484
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 24996
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 25508
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+type: ""
+copyFile() open
+get state 0
+file->write(data_block_file)1
+QIODevice::write (QFile, "ID1\fop\edr.pdf"): device not open
+file->write(data_block_file)2
+current_size >= size
+The file is received completely
+file->close()
+copyFile() close
+receive() close6
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 512
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 1024
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 1536
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 2048
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 2560
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 3072
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 3584
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 4096
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 5120
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 5632
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 6144
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 6656
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 7680
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 8192
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 8704
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 9216
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 9728
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 10240
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 10752
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 11264
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 11776
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 12288
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 12800
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 13312
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 13824
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 14336
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 14848
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 15872
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 16384
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 16896
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 17408
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 17920
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 18432
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 18944
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 19456
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 20904
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 20992
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 21504
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 22016
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 22528
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 23552
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 24576
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 25088
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 25600
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+type: ""
+copyFile() open
+get state 0
+file->write(data_block_file)1
+QIODevice::write (QFile, "ID1\fop\edr.pdf"): device not open
+file->write(data_block_file)2
+current_size >= size
+The file is received completely
+file->close()
+copyFile() close
+receive() close6
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 1024
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 1536
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 2048
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 2560
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 3584
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 4608
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 5120
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 5632
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 6144
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 6656
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 7168
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 7680
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 8192
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 8704
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 9216
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 9728
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 10240
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 10752
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 11264
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 11776
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 12288
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 12800
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 13312
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 13824
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 14336
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 14848
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 15360
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 15872
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 16384
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 16896
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 17408
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 17920
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 18432
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 18944
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 19456
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 19968
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 20480
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 20992
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 21504
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 22016
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 22528
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 23040
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 23552
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 24064
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 24576
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 25088
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+type: ""
+copyFile() open
+get state 0
+file->write(data_block_file)1
+QIODevice::write (QFile, "ID1\fop\edr.pdf"): device not open
+file->write(data_block_file)2
+current_size >= size
+The file is received completely
+file->close()
+copyFile() close
+receive() close6
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 1024
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 2472
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 2560
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 3072
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 3584
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 5032
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 5120
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 6568
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 6656
+receive() close2
+receive() open
+state Waiting
+size_info 25711
+bytesAvailable() < size_info 6692
+receive() close2er
