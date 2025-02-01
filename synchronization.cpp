@@ -36,7 +36,7 @@ void Synchronization::receive()
     if(state == Waiting){ //якщо ще не прочитали інформацію
         qDebug() << "state Waiting";
         QDataStream in(socket);
-        in.setVersion(QDataStream::Qt_6_8);
+        in.setVersion(QDataStream::Qt_5_7);
 
         if(size_info == 0){ //якщо інфи ще не було
             qDebug() << "size_info == 0";
