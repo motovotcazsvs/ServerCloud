@@ -6,6 +6,7 @@
 
 Synchronization::Synchronization(QObject* parent, QTcpSocket* sock, QString path_id) : QObject(parent), socket(sock), path_id(path_id)
 {
+    qDebug() << "Synchronization::Synchronization";
     current_path = path_id;
     QObject::connect(socket, &QTcpSocket::readyRead, this, &Synchronization::receive);
     size_info = 0;

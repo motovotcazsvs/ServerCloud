@@ -5,14 +5,12 @@
 #include <QTcpSocket>
 
 class SettingsFile;
-class Client;
 class Authorization : public QObject
 {
     Q_OBJECT
 
 private:
     QString folder_id;
-    Client* client;
     QTcpSocket* socket;
     quint64 id;
     SettingsFile* settingsfile;
@@ -20,12 +18,14 @@ private:
     void sendOK();
 
 public:
-    explicit Authorization(QObject* parent = nullptr, Client* client = nullptr, QTcpSocket* socket = nullptr, SettingsFile* settingsfile = nullptr);
+    explicit Authorization(QObject* parent = nullptr, QTcpSocket* socket = nullptr, SettingsFile* settingsfile = nullptr);
     ~Authorization();
     QString getFolderID();
     quint64 getID();
+    void disconnectSignal();
 
 signals:
+    void authorizationSuccessfull();
 
 public slots:
 

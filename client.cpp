@@ -8,7 +8,9 @@ Client::Client(QObject *parent, QTcpSocket* socket, SettingsFile* settingsfile) 
 {
     state = stateWaiting;
     socket_descriptor = socket->socketDescriptor();
-    authorization = new Authorization(this, this, socket, settingsfile);
+    authorization = new Authorization(this, socket, settingsfile);
+    QObject::connect(authorization, &Authorization::authorizationSuccessfull, this, &Client::authorizationClient);
+
 
 
 
@@ -21,11 +23,16 @@ Client::~Client()
     delete synchronization;
 }
 
-void Client::authorizationSuccessfull()
+void Client::authorizationClient()
 {
-    delete authorization;
+    qDebug() << "Client::authorizationSuccessfull()";
+    ID = authorization->getID();
+    folder_id = authorization->getFolderID();
+    authorization->deleteLater();
+    authorization = nullptr;
+    //qDebug() << "Client::authorizationSuccessfull dohode";
     synchronization = new Synchronization(this, socket, folder_id);
-
+    //qDebug() << "Client::authorizationSuccessfull dohode2";
 }
 
 void Client::setID(quint64 id)

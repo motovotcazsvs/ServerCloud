@@ -5,7 +5,7 @@
 #include "settingsfile.h"
 #include "client.h"
 
-Authorization::Authorization(QObject* parent, Client* client, QTcpSocket* socket, SettingsFile* settingsfile) : QObject(parent), client(client), socket(socket), settingsfile(settingsfile)
+Authorization::Authorization(QObject* parent, QTcpSocket* socket, SettingsFile* settingsfile) : QObject(parent), socket(socket), settingsfile(settingsfile)
 {
     QObject::connect(socket, &QTcpSocket::readyRead, this, &Authorization::authorizationClient);
     id = 0;
@@ -14,6 +14,7 @@ Authorization::Authorization(QObject* parent, Client* client, QTcpSocket* socket
 
 Authorization::~Authorization()
 {
+
 
 }
 
@@ -47,11 +48,10 @@ void Authorization::authorizationClient()
         }
         else return;
 
-        client->setID(id);
-        client->setFolderID(folder_id);
-        client->authorizationSuccessfull();
 
+        emit authorizationSuccessfull();
     }
+
     if(socket->bytesAvailable()){
         qDebug() << "data available";
         authorizationClient();
@@ -86,5 +86,15 @@ void Authorization::sendOK()
     socket->write(arr);
     socket->waitForBytesWritten();
 
+}
+
+quint64 Authorization::getID()
+{
+    return id;
+}
+
+QString Authorization::getFolderID()
+{
+    return folder_id;
 }
 
