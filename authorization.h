@@ -20,12 +20,14 @@ private:
     void sendOK();
 
 public:
-    explicit Authorization(QObject* parent = nullptr, Client* client = nullptr, QTcpSocket* socket = nullptr, SettingsFile* settingsfile = nullptr);
+    explicit Authorization(QObject* parent = nullptr, QTcpSocket* socket = nullptr, SettingsFile* settingsfile = nullptr);
     ~Authorization();
     QString getFolderID();
     quint64 getID();
+    void disconnectSignal();
 
 signals:
+    void authorizationSuccessfull();
 
 public slots:
 
