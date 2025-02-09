@@ -24,7 +24,7 @@ Server::~Server()
 //підключення клієнта
 void Server::incomingConnection(qintptr socket_descriptor)
 {
-    socket = new QTcpSocket;
+    socket = new QTcpSocket(this);
     socket->setSocketDescriptor(socket_descriptor);
 
     if (!socket->isValid()) {

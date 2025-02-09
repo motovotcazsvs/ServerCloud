@@ -21,7 +21,7 @@ public:
     ~Client();
     void setID(quint64);
     void setFolderID(QString);
-    void authorizationSuccessfull();
+
 
 private:
     QTcpSocket* socket;
@@ -38,7 +38,7 @@ signals:
 
 
 private slots:
-
+    void authorizationClient();
 };
 
 #endif // CLIENT_H
