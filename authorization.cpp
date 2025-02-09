@@ -23,7 +23,7 @@ void Authorization::authorizationClient()
     qDebug() << "authorizationClient()";
     socket = (QTcpSocket*)sender();
     QDataStream in(socket);
-    in.setVersion(QDataStream::Qt_6_8);
+    in.setVersion(QDataStream::Qt_5_7);
     quint16 size;
     QString type;
 
@@ -63,7 +63,7 @@ void Authorization::sendID()
     qDebug() << "sendID()" << id;
     QByteArray arr;
     QDataStream out(&arr, QIODevice::WriteOnly);
-    out.setVersion(QDataStream::Qt_6_8);
+    out.setVersion(QDataStream::Qt_5_7);
     out << quint16(0) << QString("ID") << id;//резервуєм два байта на розмір блоку(записуючи туди нулі) та поміщаєм дані в масив
     out.device()->seek(0);//переміщаємо вказівник на начало в масиві, тобто на зарезервовані два байта - розмір блоку
     out << quint16(arr.size() - sizeof(quint16));//та записуєм туди фактичний розмір даних(віднявши від масива перші два байти)
@@ -78,7 +78,7 @@ void Authorization::sendOK()
     qDebug() << "sendOK()";
     QByteArray arr;
     QDataStream out(&arr, QIODevice::WriteOnly);
-    out.setVersion(QDataStream::Qt_6_8);
+    out.setVersion(QDataStream::Qt_5_7);
     out << quint16(0) << QString("OK");//резервуєм два байта на розмір блоку(записуючи туди нулі) та поміщаєм дані в масив
     out.device()->seek(0);//переміщаємо вказівник на начало в масиві, тобто на зарезервовані два байта - розмір блоку
     out << quint16(arr.size() - sizeof(quint16));//та записуєм туди фактичний розмір даних(віднявши від масива перші два байти)
