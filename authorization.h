@@ -5,14 +5,12 @@
 #include <QTcpSocket>
 
 class SettingsFile;
-class Client;
 class Authorization : public QObject
 {
     Q_OBJECT
 
 private:
     QString folder_id;
-    Client* client;
     QTcpSocket* socket;
     quint64 id;
     SettingsFile* settingsfile;
